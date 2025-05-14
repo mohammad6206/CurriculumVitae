@@ -1,0 +1,156 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Resume</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div class="wraper">
+        <div class="container">
+            <div class="left-content p-30">
+                <div class="logo">
+                    <a href="{% url 'MyResume:index' %}">
+                        <span>MyResume</span>
+                    </a>
+                </div>
+                <div class="nav">
+                    <ul>
+                        <li><a href="#Home">Home</a></li>
+                        <li><a href="#Education">Education</a></li>
+                        <li><a href="#Languages">Languages</a></li>
+                        <li><a href="#Skills">Skills</a></li>
+                        <li><a href="#Projects">Projects</a></li>
+                    </ul>
+                </div>
+                <div class="left-footer">
+                    <div class="social-icons">
+                        <ul>
+                            <li><a href="https://github.com/mohammad6206" target="_blank"><i class="fa fa-github"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://wa.me/09170496206" target="_blank"><i class="fa fa-whatsapp"
+                                        aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.youtube.com/@mohammad_mokhtari" target="_blank"><i
+                                        class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li><a href="https://www.instagram.com/_m.mehdi_mokhtari/" target="_blank"><i
+                                        class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="foot-contact">
+                        <ul>
+                            <li>mohammad1382.6206@gmail.com</li>
+                            <li>09170496206</li>
+                        </ul>
+                    </div>
+
+                    <div class="copy-rights">Copyright &copy;2025 All rights reserved</div>
+                </div>
+
+            </div>
+            <div class="main-content">
+                <div class="section1 p-30" id="Home">
+                    <div class="sec-title">
+                        <div class="pg-sub-title">Home</div>
+                        <div class="pg-title">My Profile</div>
+                    </div>
+                    <div class="d-flex-align-center">
+                        <div class="user-img flex-1"><img src="{% static 'img/myimage.jpg' %}" class="img-fluid"
+                                style="width: 600px; height: 600px;" alt="My Image">
+                        </div>
+                        <div class="user-profile flex-1">
+                            <div class="pro-details">
+                                <div class="sm-text">HELLO EVERYBODY, I AM</div>
+                                <div class="name">Mohammad Mehdi Mokhtari</div>
+                                <div class="role">web Developer</div>
+
+                            </div>
+                            <div class="text">
+                                <p> developer, experience designer, and someone who loves building things
+                                    that actually work.</p>
+                                <p> coding and UI design to creating smart solutions, my journey has always been
+                                    about making things better.</p>
+                                <p> resume is a place for you to get to know me, my skills, and the projects I've
+                                    brought to life.</p>
+
+                            </div>
+                            <div class="pr-list">
+                                <ul>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i> 14, May, 2025</li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i>09170496206</li>
+                                    <li><i class="fa fa-envelope" aria-hidden="true"></i>mohammad1382.6206@gmail.com
+                                    </li>
+                                    <li><i class="fa fa-map-marker" aria-hidden="true"></i>Fars , Lamerd</li>
+                                </ul>
+                            </div>
+                            <div class="social-icons-head">
+                                <ul>
+                                    <li><a href="https://github.com/mohammad6206" target="_blank"><i
+                                                class="fa fa-github" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://wa.me/09170496206" target="_blank"><i class="fa fa-whatsapp"
+                                                aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.youtube.com/@mohammad_mokhtari" target="_blank"><i
+                                                class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                                    <li><a href="https://www.instagram.com/_m.mehdi_mokhtari/" target="_blank"><i
+                                                class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="section1 p-30" id="Education">
+                    <div class="sec-title">
+                        <div class="pg-sub-title">Education</div>
+                        <div class="pg-title">My Educational Background</div>
+                    </div>
+                    <ul>
+                        <li><strong>Computer Engineering</strong> – Shiraz University (2021 – 2025)</li>
+                        <li>High School – Mathematics and Physics – Lamerd (2017 – 2020)</li>
+                    </ul>
+                </div>
+                <div class="section1 p-30" id="Languages">
+                    <div class="sec-title">
+                        <div class="pg-sub-title">Languages</div>
+                        <div class="pg-title">Language Skills</div>
+                    </div>
+                    <ul>
+                        <li>🇮🇷 Persian (Native)</li>
+                        <li>🇬🇧 English (Professional)</li>
+                        <li>🇩🇪 German (Beginner)</li>
+                    </ul>
+                </div>
+                <div class="section1 p-30" id="Skills">
+                    <div class="sec-title">
+                        <div class="pg-sub-title">Skills</div>
+                        <div class="pg-title">What I’m Good At</div>
+                    </div>
+                    <ul>
+                        <li>Python, Django</li>
+                        <li>HTML, CSS, Tailwind</li>
+                        <li>JavaScript, React.js</li>
+                        <li>REST APIs</li>
+                        <li>Git & GitHub</li>
+                        <li>UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="section1 p-30" id="Projects">
+                    <div class="sec-title">
+                        <div class="pg-sub-title">Projects</div>
+                        <div class="pg-title">My Work</div>
+                    </div>
+                    <ul>
+                        <li><strong>Cafiino:</strong> Online coffee store built with Django</li>
+                        <li><strong>AI Chat Interface:</strong> React + Django backend using OpenAI API</li>
+                        <li><strong>Portfolio Website:</strong> Personal one-page portfolio with animation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
