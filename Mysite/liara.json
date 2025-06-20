@@ -1,0 +1,17 @@
+{
+  "platform": "django",
+  "django": {
+    "pythonVersion": "3.13.3",
+    "collectStatic": true,
+    "compileMessages": false,
+    "modifySettings": true,
+    "timezone": "Asia/Tehran"
+  },
+  "app": "MyResume",
+  "disks": [
+    {
+      "name": "static",
+      "mountTo": "static"
+    }
+  ]
+}

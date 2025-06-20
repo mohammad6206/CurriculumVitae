@@ -7,9 +7,107 @@
     <title>My Resume</title>
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        /* دکمه منوی همبرگری فقط در موبایل نمایش داده شود */
+        #menu-toggle {
+            display: none;
+            font-size: 2rem;
+            background: none;
+            border: none;
+            cursor: pointer;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+            color: #333;
+        }
+
+        /* منوی موبایل */
+        #mobile-menu {
+            display: none;
+            background: #333;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 250px;
+            height: 100%;
+            padding-top: 60px;
+            z-index: 1000;
+            overflow-y: auto;
+        }
+
+        #mobile-menu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #mobile-menu li {
+            border-bottom: 1px solid #555;
+        }
+
+        #mobile-menu li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        #mobile-menu li a:hover {
+            background-color: #555;
+        }
+
+        /* وقتی منو باز است */
+        #mobile-menu.open {
+            display: block;
+        }
+
+        /* در موبایل، منوی اصلی (left-content) را مخفی کن */
+        @media (max-width: 768px) {
+            #menu-toggle {
+                display: block;
+            }
+
+            .left-content {
+                display: none;
+            }
+
+            .main-content {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <!-- دکمه منوی همبرگری موبایل -->
+    <button id="menu-toggle" aria-label="Toggle Menu">☰</button>
+
+    <!-- منوی موبایل -->
+    <nav id="mobile-menu" aria-label="Mobile Navigation">
+        <ul>
+            <li><a href="#Home" onclick="closeMenu()">Home</a></li>
+            <li><a href="#Education" onclick="closeMenu()">Education</a></li>
+            <li><a href="#Languages" onclick="closeMenu()">Languages</a></li>
+            <li><a href="#Skills" onclick="closeMenu()">Skills</a></li>
+            <li><a href="#Projects" onclick="closeMenu()">Projects</a></li>
+        </ul>
+        <div class="mobile-social-icons" style="padding: 15px 20px;">
+            <a href="https://github.com/mohammad6206" target="_blank" style="color:white; margin-right: 10px;"><i
+                    class="fa fa-github"></i></a>
+            <a href="https://wa.me/09170496206" target="_blank" style="color:white; margin-right: 10px;"><i
+                    class="fa fa-whatsapp"></i></a>
+            <a href="https://www.youtube.com/@mohammad_mokhtari" target="_blank"
+                style="color:white; margin-right: 10px;"><i class="fa fa-youtube"></i></a>
+            <a href="https://www.instagram.com/_m.mehdi_mokhtari/" target="_blank" style="color:white;"><i
+                    class="fa fa-instagram"></i></a>
+        </div>
+    </nav>
+
     <div class="wraper">
         <div class="container">
             <div class="left-content p-30">
@@ -151,6 +249,21 @@
             </div>
         </div>
     </div>
+
+    <!-- اسکریپت منوی همبرگری -->
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('open');
+        });
+
+        // بستن منو هنگام کلیک روی لینک
+        function closeMenu() {
+            mobileMenu.classList.remove('open');
+        }
+    </script>
 </body>
 
 </html>
